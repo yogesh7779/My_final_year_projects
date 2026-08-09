@@ -34,14 +34,6 @@ MainActivity.kt → Entry point
 
 ---
 
-## ⚙️ Setup Instructions
-
-### Clone the Repository
-
-git clone [https://github.com/malikarshid01430-byte/MadhuMarga.git](https://github.com/malikarshid01430-byte/MadhuMarga.git)
-
----
-
 ### Or Download ZIP
 
 1. Go to the repository on GitHub
@@ -76,25 +68,6 @@ This app helps you replace manual credit notebooks with a digital system. You ca
 • Cloud backup
 • Analytics dashboard
 • Multi language support
-
----
-
-## 🤝 Contributing
-
-Fork the repository
-Create a new branch
-Make changes and commit
-Push and create a pull request
-
----
-
-## 📄 License
-
-MIT License
-
----
-
-## 👨‍💻 Author
 
 Developed by Arshid Ahmad Malik
 
