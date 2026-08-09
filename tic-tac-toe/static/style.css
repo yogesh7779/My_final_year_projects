@@ -1,0 +1,98 @@
+/* General styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f5;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Mode selection buttons */
+.mode {
+    margin-bottom: 20px;
+}
+
+.mode button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mode button:hover {
+    background-color: #45a049;
+}
+
+/* Game board styling */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.cell:active {
+    transform: scale(0.98);
+}
+
+#status {
+    font-size: 24px;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Winner announcement style */
+#winner {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FF5722;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.cell {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: pop 0.3s ease forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+
