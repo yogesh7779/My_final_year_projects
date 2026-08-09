@@ -69,8 +69,6 @@ This app helps you replace manual credit notebooks with a digital system. You ca
 • Analytics dashboard
 • Multi language support
 
-Developed by Arshid Ahmad Malik
-
 ---
 
 ## ⭐ Support
