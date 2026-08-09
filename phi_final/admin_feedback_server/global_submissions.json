@@ -1,0 +1,135 @@
+[
+    {
+        "url": "http://rnicrosoft.com",
+        "user_label": "phishing",
+        "model_prediction": "legitimate",
+        "timestamp": "2025-11-26 14:06:31.536575",
+        "device_id": "e948f6fc-fd1e-4518-8b7d-d453336ca09d"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "phishing",
+        "model_prediction": "legitimate",
+        "timestamp": "2025-11-26 14:40:00.115898",
+        "device_id": "4b13896d-4dc7-4f70-a3ec-7d987be98f70"
+    },
+    {
+        "url": "https://www.google.com",
+        "user_label": "legitimate",
+        "model_prediction": "phishing",
+        "timestamp": "2025-11-26 15:51:20.525241",
+        "device_id": "80a96f58-a8c3-4c7d-ba90-c7f249482b8a"
+    },
+    {
+        "url": "https://netmirrorapp.github.io/netmirrorapp/",
+        "user_label": "phishing",
+        "model_prediction": "legitimate",
+        "timestamp": "2025-11-26 16:03:27.675883",
+        "device_id": "57e78c47-ce97-4a81-ac01-37022b2e77c4"
+    },
+    {
+        "url": "https://netmirror.gg/1/en",
+        "user_label": "phishing",
+        "model_prediction": "legitimate",
+        "timestamp": "2025-11-26 16:08:20.704896",
+        "device_id": "c7fcd818-3b48-4485-a3f5-d61e94755bac"
+    },
+    {
+        "url": "https://www.movierulz.com",
+        "user_label": "phishing",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:22:40.544776",
+        "device_id": "922396a9-7794-401f-a239-2822fa7ec739"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "legitimate",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:35:22.513126",
+        "device_id": "af3a6a4a-1885-4220-a9e2-88938ee8595f"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "legitimate",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:35:24.362173",
+        "device_id": "7d794d93-452d-4684-a90b-86bf5cc3cf97"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "phishing",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:35:45.293488",
+        "device_id": "d44950f1-3394-463d-854c-2777ace84330"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "phishing",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:35:47.484285",
+        "device_id": "86ecc4b8-7a04-4b63-a354-d6a731ebc0d3"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "phishing",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:36:06.583405",
+        "device_id": "aac69ae3-4e78-4ed4-b4cb-1b1a47587e76"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "phishing",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:36:07.034288",
+        "device_id": "b860cf03-0c5a-4765-bb50-6a44086cc290"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "phishing",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:36:07.185089",
+        "device_id": "c2aba574-23ac-44a2-931b-ac068ebdf70f"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "phishing",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:36:07.346293",
+        "device_id": "584d7f00-da7d-40c5-9902-ff284f360e06"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "legitimate",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:36:08.101633",
+        "device_id": "6ed73e89-b5a6-43e5-95ce-dcbb40619184"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "legitimate",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:36:08.250547",
+        "device_id": "24461b07-234a-4252-aced-956434811598"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "legitimate",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:36:08.397523",
+        "device_id": "0df4c6c2-b749-49fe-8bbc-06ab556d0dbb"
+    },
+    {
+        "url": "https://www.5movierulz.dental/",
+        "user_label": "legitimate",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:36:08.621831",
+        "device_id": "2783f6a6-4c01-4a9e-b29e-b6b3cb1e9abf"
+    },
+    {
+        "url": "https://www.youtube.com/",
+        "user_label": "legitimate",
+        "model_label": "legitimate",
+        "timestamp": "2025-11-29 10:38:48.788118",
+        "device_id": "90a6a41c-1f8b-40a2-b2f0-b79aaa76727d"
+    }
+]

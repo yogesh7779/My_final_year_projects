@@ -1,0 +1,18 @@
+{
+    "www.google.com": {
+        "label": "legitimate",
+        "source": "user_feedback"
+    },
+    "https://www.movierulz.com": {
+        "label": "phishing",
+        "source": "user_feedback"
+    },
+    "https://www.5movierulz.dental/": {
+        "label": "legitimate",
+        "source": "user_feedback"
+    },
+    "https://www.youtube.com/": {
+        "label": "legitimate",
+        "source": "user_feedback"
+    }
+}

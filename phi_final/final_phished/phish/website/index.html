@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered phishing URL detection system. Check if a website is safe or potentially malicious.">
+    <meta name="keywords" content="phishing detection, URL checker, security, malware detection">
+    <title>URL Phishing Detection System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">URL Phishing Guard</span>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#stats" class="nav-link">Statistics</a>
+                <a href="history.html" class="nav-link">History</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">
+                    <svg class="badge-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    AI-Powered Security
+                </div>
+                <h1 class="hero-title">
+                    Protect Yourself from
+                    <span class="gradient-text">Phishing Attacks</span>
+                </h1>
+                <p class="hero-description">
+                    Advanced machine learning technology to detect malicious URLs instantly. 
+                    Stay safe online with real-time phishing detection powered by your trained deep learning model.
+                </p>
+
+                <!-- URL Checker Form -->
+                <div class="checker-card">
+                    <form id="urlForm" class="checker-form">
+                        <div class="input-wrapper">
+                            <svg class="input-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
+                            </svg>
+                            <input 
+                                type="text" 
+                                id="urlInput" 
+                                class="url-input" 
+                                placeholder="Enter URL to check (e.g., https://example.com)"
+                                autocomplete="off"
+                                spellcheck="false"
+                            >
+                            <button type="button" id="clearBtn" class="clear-btn" aria-label="Clear input">
+                                <svg viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <button type="submit" id="checkBtn" class="check-btn">
+                            <span class="btn-text">Analyze URL</span>
+                            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="loader"></span>
+                        </button>
+                    </form>
+
+                    <!-- Results Container -->
+                    <div id="resultContainer" class="result-container hidden">
+                        <div class="result-card">
+                            <div class="result-header">
+                                <div class="result-icon-wrapper" id="resultIconWrapper">
+                                    <svg class="result-icon" id="resultIcon" viewBox="0 0 20 20" fill="currentColor"></svg>
+                                </div>
+                                <div class="result-info">
+                                    <h3 class="result-title" id="resultTitle">Analyzing...</h3>
+                                    <p class="result-url" id="resultUrl"></p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Prediction:</span>
+                                    <span class="detail-value" id="predictionValue">-</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Confidence:</span>
+                                    <div class="confidence-bar-wrapper">
+                                        <div class="confidence-bar">
+                                            <div class="confidence-fill" id="confidenceFill"></div>
+                                        </div>
+                                        <span class="confidence-text" id="confidenceText">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result-message" id="resultMessage"></div>
+                            
+                            <div class="result-actions">
+                                <button type="button" class="action-btn secondary" id="copyUrlBtn">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/>
+                                        <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/>
+                                    </svg>
+                                    Copy URL
+                                </button>
+                                <button type="button" class="action-btn secondary" id="markPhishingBtn">
+                                    Mark as Phishing
+                                </button>
+                                <button type="button" class="action-btn secondary" id="markSafeBtn">
+                                    Mark as Safe
+                                </button>
+                                <button type="button" class="action-btn primary" id="checkAnotherBtn">
+                                    Check Another URL
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Error Container -->
+                    <div id="errorContainer" class="error-container hidden">
+                        <div class="error-card">
+                            <svg class="error-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293z" clip-rule="evenodd"/>
+                            </svg>
+                            <h3 class="error-title">Analysis Failed</h3>
+                            <p class="error-message" id="errorMessage"></p>
+                            <button type="button" class="action-btn secondary" id="dismissErrorBtn">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <!-- Batch URL Checker -->
+                <div class="checker-card" id="batchCheckerCard">
+                    <form id="batchForm" class="checker-form">
+                        <label for="batchInput" class="sr-only">Enter multiple URLs (one per line)</label>
+                        <div class="input-wrapper">
+                            <svg class="input-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
+                            </svg>
+                            <textarea id="batchInput" class="batch-input" placeholder="Enter multiple URLs, one per line (or paste CSV)" rows="6"></textarea>
+                        </div>
+                        <div style="display:flex;gap:1rem;align-items:center;">
+                            <button type="submit" id="batchCheckBtn" class="check-btn">
+                                <span class="btn-text">Analyze Batch</span>
+                                <span class="loader"></span>
+                            </button>
+                            <button type="button" id="batchClearBtn" class="action-btn secondary">Clear</button>
+                            <div style="flex:1"></div>
+                        </div>
+                    </form>
+
+                    <!-- Batch Results Container -->
+                    <div id="batchResultContainer" class="result-container hidden">
+                        <div class="result-card">
+                            <div class="result-header">
+                                <div class="result-info">
+                                    <h3 class="result-title">Batch Analysis Results</h3>
+                                    <p class="result-url" id="batchSummary">Processed <span id="batchTotal">0</span> URLs — <span id="batchSafeCount">0</span> safe, <span id="batchPhishCount">0</span> phished</p>
+                                </div>
+                            </div>
+
+                            <div class="result-details batch-results-grid">
+                                <div class="batch-column">
+                                    <h4 class="section-subtitle">✅ Safe URLs</h4>
+                                    <ul id="safeList" class="batch-list"></ul>
+                                </div>
+                                <div class="batch-column">
+                                    <h4 class="section-subtitle">⚠️ Phished URLs</h4>
+                                    <ul id="phishedList" class="batch-list"></ul>
+                                </div>
+                            </div>
+
+                            <div class="result-actions">
+                                <button type="button" id="downloadBatchBtn" class="action-btn secondary">Download CSV</button>
+                                <button type="button" id="closeBatchBtn" class="action-btn primary">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">90.4%</div>
+                        <div class="stat-label">Accuracy*</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">&lt;100ms</div>
+                        <div class="stat-label">Response Time*</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Protection</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">Your trained ML model analyzes URLs in real-time using extracted features.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Feature Extraction</h3>
+                    <p class="feature-description">Analyzes URL length, hostname, special characters, TLDs, subdomains, and phishing-related patterns.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M13 7H7v6h6V7z"/>
+                            <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Deep Learning Model</h3>
+                    <p class="feature-description">Your trained neural network uses these features to classify URLs as phishing or legitimate.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Instant Results</h3>
+                    <p class="feature-description">Get real-time predictions with confidence scores in milliseconds (depending on hardware).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="section section-alt" id="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stats-content">
+                    <h2 class="section-title">Project Statistics</h2>
+                    <p class="section-description">Machine learning based phishing URL detection system.</p>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-number">55+</div>
+                            <div class="stat-text">URL Features</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">TensorFlow</div>
+                            <div class="stat-text">Deep Learning Framework</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">Real-Time</div>
+                            <div class="stat-text">URL Analysis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Tips -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Stay Safe Online</h2>
+                <p class="section-description">Essential tips to protect yourself from phishing attacks</p>
+            </div>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-number">1</div>
+                    <h3 class="tip-title">Check the URL</h3>
+                    <p class="tip-description">Always verify the domain name. Phishing sites often use misspellings or extra characters.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">2</div>
+                    <h3 class="tip-title">Look for HTTPS</h3>
+                    <p class="tip-description">Legitimate sites usually use secure connections. Check for the padlock icon in your browser.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">3</div>
+                    <h3 class="tip-title">Be Suspicious</h3>
+                    <p class="tip-description">If an offer seems too good to be true or creates urgency, it's likely a scam.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">4</div>
+                    <h3 class="tip-title">Use This Tool</h3>
+                    <p class="tip-description">When in doubt, check suspicious URLs with this ML-powered detection system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="logo-text">URL Phishing Guard</span>
+                </div>
+                <p class="footer-text">Phishing URL detection using machine learning and deep learning.</p>
+                <p class="footer-copyright">© 2025 Final Year Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

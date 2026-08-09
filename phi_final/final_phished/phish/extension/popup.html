@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>URL Phishing Guard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <header class="popup-header">
+      <div class="logo">🔗</div>
+      <div class="title">URL Phishing Guard</div>
+    </header>
+
+    <main class="popup-body">
+      <div class="section">
+        <div class="label">Last scanned</div>
+        <div id="last-url" class="last-url">No scans yet</div>
+      </div>
+
+      <div class="section result" id="result-section" style="display:none">
+        <div class="status-row">
+          <div id="status-indicator" class="status-indicator">⏳</div>
+          <div class="status-info">
+            <div id="status-text" class="status-text">Analyzing...</div>
+            <div id="status-detail" class="status-detail">Waiting for result</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section feedback" id="feedback-section" style="display:none">
+        <div class="label">Was this prediction correct?</div>
+        <div class="actions feedback-actions">
+          <button id="mark-phishing-btn" class="btn secondary">Mark as Phishing</button>
+          <button id="mark-safe-btn" class="btn secondary">Mark as Safe</button>
+        </div>
+      </div>
+
+      <div class="section actions">
+        <button id="open-btn" class="btn primary">Open Link</button>
+        <button id="copy-btn" class="btn secondary">Copy URL</button>
+        <button id="rescan-btn" class="btn gradient">Rescan</button>
+      </div>
+
+      <div class="note" id="note" style="display:none">Backend server is offline — cannot analyze URL.</div>
+    </main>
+
+    <footer class="popup-footer">
+      <small>Local model: POST to <code>http://127.0.0.1:5000/predict</code></small>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
